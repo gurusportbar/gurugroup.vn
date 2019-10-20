@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f3f07e04-44a6-4102-bcf1-2409fa59c88b" name="GURUGURU" url="http://210.211.113.144">
+        <fileTransfer host="210.211.113.144" port="21" rootFolder="/public_html/develop_2019">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
