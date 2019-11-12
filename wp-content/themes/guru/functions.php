@@ -573,3 +573,40 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+// Our custom post type function
+function create_posttype() {
+
+    register_post_type( 'gallery',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Gallery' ),
+                'singular_name' => __( 'Gallery' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'gallery'),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
+
+function create_posttype_slide() {
+
+    register_post_type( 'slide',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Slide' ),
+                'singular_name' => __( 'Slide' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'slide'),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype_slide' );

@@ -7,41 +7,37 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<?php twentysixteen_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
-				'separator'   => '<span class="screen-reader-text">, </span>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<?php
-		edit_post_link(
-			sprintf(
-				/* translators: %s: Name of current post */
-				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-				get_the_title()
-			),
-			'<footer class="entry-footer"><span class="edit-link">',
-			'</span></footer><!-- .entry-footer -->'
-		);
-		?>
-
-</article><!-- #post-<?php the_ID(); ?> -->
+<header class="header">
+    <div class="container">
+        <div class="head">
+            <div class="logo"><a href=""><img src="<?php echo get_template_directory_uri();?>/assets/images/logo-guru.png" width="620" height="auto" alt=""></a></div>
+            <ul class="nav justify-content-end">
+                <li class="nav-item"> <a class="nav-link active" href="#">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Press</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Gallery</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Shop</a> </li>
+            </ul>
+            <div class="new-date"><?php echo strtoupper(date('D'))?>, <?php echo strtoupper(date('M'))?> <?php echo date('d')?>, <?php echo date('Y')?></div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="list-logo-brand">
+            <a class="item" href=""><img src="<?php echo get_template_directory_uri();?>/assets/images/logo-dh.png" alt=""></a>
+            <a class="item"href=""><img src="<?php echo get_template_directory_uri();?>/assets/images/logo-gsb.png" alt=""></a>
+            <a class="item" href=""><img src="<?php echo get_template_directory_uri();?>/assets/images/logo-cs.png" alt=""></a>
+        </div>
+        <div class="slider">
+            <div class="owl-carousel" id="carouselMain">
+                <div class="item"><img src="<?php echo get_template_directory_uri();?>/assets/1.jpg" width="1140" height="446" alt=""></div>
+                <div class="item"><img src="<?php echo get_template_directory_uri();?>/assets/2.jpg" width="1140" height="446" alt=""></div>
+                <div class="item"><img src="<?php echo get_template_directory_uri();?>/assets/3.jpg" width="1140" height="446" alt=""></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card">
+            <p class="card-text">SSS</p>
+            </div>
+        </div>
